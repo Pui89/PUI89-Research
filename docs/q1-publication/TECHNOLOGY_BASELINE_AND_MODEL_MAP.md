@@ -244,3 +244,147 @@ Reviewed current repository records on 25 November 2026, including:
 - `Pui89/PUI89-Shared-AI-Core`: specialist model family matrix, Hugging Face model registry, non-Chinese open-model radar, master dataset/model mapping, sensor intelligence core, universal sensory intelligence and heterogeneous compute architecture.
 
 **Scope note:** the Shared AI Core registry snapshot inspected during this review currently labels a five-product portfolio and omits Sentinel. This research document deliberately follows the user's current six-product scope and treats Sentinel as its own general-security research track. The registry discrepancy must be reconciled upstream; it must not be used to silently remove Sentinel or restore the retired screening scope.
+
+
+## 8. End-to-end 360-degree perception research architecture
+
+**Purpose:** define a common, testable surround-perception research architecture that can be adapted to all six projects. “360-degree perception” means a measured, time-synchronised and uncertainty-aware representation of the environment around a platform—not simply placing multiple cameras on a diagram. It does not guarantee complete visibility, zero blind spots, reliable detection in every condition or safe autonomous operation.
+
+### 8.1 What 360-degree perception includes
+
+1. **Sensor coverage design:** identify the platform, operating envelope, required fields of view, mounting locations, occlusions, overlap zones and blind/unobserved regions. Possible inputs include multiple RGB cameras, RGB-D/stereo, thermal, LiDAR, radar, IMU/odometry and permitted environmental sensors. Use only modalities actually present in a recorded experiment.
+2. **Calibration and synchronisation:** intrinsic/extrinsic calibration, camera-to-platform coordinate frames, timestamps, rolling-shutter/motion effects, clock drift, sensor health and calibration version. Recalibration triggers and tolerances must be specified.
+3. **Per-sensor perception:** detection, segmentation, tracking, depth/geometry and scene interpretation are evaluated per sensor before fusion. Preserve the original sensor identity and source timestamps.
+4. **Spatial fusion:** transform observations into a common platform/world frame; represent occupied, free, unknown and occluded regions separately. Fuse only compatible measurements with justified uncertainty models. Do not turn missing coverage into “free space”.
+5. **Temporal tracking and world model:** maintain track identity only when continuity is supported; record object state, velocity estimates, age, confidence, uncertainty and provenance. Handle duplicate detections in overlapping views without double-counting.
+6. **Risk and context reasoning:** estimate task-relevant hazards and context, expose conflicting evidence and out-of-distribution conditions, and allow abstention. A VLM/LLM can help explain or summarise evidence but is not ground truth or a safety controller.
+7. **Decision support and fallback:** publish bounded, advisory ActionProposal records with preconditions, uncertainty, freshness and reason codes. Stale, contradictory, uncalibrated or insufficient-coverage input must trigger unknown/abstain/safe-hold behaviour appropriate to the platform. These research plans do not authorise direct actuation.
+8. **Evidence and audit:** retain dataset/model/calibration versions, sensor provenance, split manifest, timestamps, inference outputs, faults, reviewer decisions and experiment records so each result is reproducible.
+
+### 8.2 Shared AI Core data flow
+
+| Stage | Shared AI Core representation | Required evidence |
+|---|---|---|
+| Raw sensor capture | Observation | Sensor ID, modality, timestamp, frame, calibration ID, health, quality, source/hash and permitted-use metadata |
+| Calibrated geometry | Observation + derived evidence | Coordinate frame, calibration version, transform, synchronisation error and uncertainty |
+| Fused environment | WorldState | Coverage map, detected entities, tracks, free/occupied/unknown space, conflicts, age and confidence |
+| Advisory response | ActionProposal | Proposed warning/route/assistive suggestion, evidence references, preconditions, expiry, uncertainty and abstention reason |
+| Fault or degraded mode | FailureReport | Missing camera/sensor, occlusion, drift, dropped frames, calibration failure, false/missed detection and fallback outcome |
+| Research traceability | Evidence Passport | Data split, code/model/weights hash, calibration, configuration, metric, test condition, reviewer and claim link |
+
+The fusion layer must not infer a complete 360-degree view from partial sensors. Coverage should be represented as a measurable function of direction, range, elevation, distance, lighting and operating condition. Every derived estimate must retain links to the contributing observations.
+
+### 8.3 Six-project 360-degree adaptation matrix
+
+| Project | 360-degree perception objective | Candidate sensor/view configuration (not a selected BOM) | Project-specific evaluation |
+|---|---|---|---|
+| Coconut Harvest AI | Surrounding orchard/harvesting-scene awareness: fruit bunches, branches, trunks, workers, animals, obstacles and reachable workspace | Multi-view RGB; RGB-D/stereo or LiDAR only if available and calibrated; IMU/robot pose if recorded | Angular coverage and occlusion by canopy; fruit/bunch duplicate handling; four maturity classes; per-view and fused metrics; spatial error against measured ground truth; worker/animal exclusion-zone recall |
+| PUI89 Sentinel | Privacy-constrained facility/environment event awareness across permitted camera zones and approved non-visual sensors | Fixed multi-camera views plus only authorised thermal, acoustic, vibration or environmental channels | Camera-zone coverage; event-level recall and false alarms per monitored hour; cross-camera duplicate events; missing-stream and clock-drift faults; privacy masking and evidence traceability. Narcotics/X-ray/forensic scope remains excluded |
+| AI HOME | Indoor assistant awareness around the mobile base, including people, furniture, doors, obstacles and drop-offs | Forward/rear/side or panoramic RGB as justified; depth/short-range sensors and IMU/odometry only when installed and calibrated | Blind-zone and near-field coverage; dynamic human/obstacle recall; doorway and drop-off cases; localisation/layout split; safe-stop/abstention and intervention rates |
+| AI NOMAD | Outdoor surround awareness for terrain, obstacles, people, animals, slopes and route boundaries | Multi-direction RGB; depth/LiDAR/IMU/odometry where actually available; environmental sensors only when recorded | Terrain/weather strata; ground-contact/near-field blind zones; false-safe versus false-hazard; route/site-held-out tests; vibration, mud, rain and sensor contamination |
+| AI Robot Car | Vehicle surround awareness for road users, vulnerable road users, obstacles and road context | Existing repository direction begins with front/rear cameras; side and rear-quarter views are optional and require coverage/calibration study; radar/LiDAR only if approved and fitted | Per-camera and fused detection; angular/range coverage; overlap duplicates; VRU recall; route/weather-held-out event metrics; latency and warning lead time. No autonomous steering/throttle/braking |
+| EasyRide AI Step-Through Scooter | Rider-centred surround awareness with explicit two-wheel blind-zone and camera-mount limitations | Repository direction begins with forward/rear views; side/rear-quarter or other sensors are candidates only after ergonomic, mounting, vibration and power assessment | Rider-view versus car-view; blind/unobserved region map; lean/turn/vibration/weather strata; hazard recall and false alerts per riding hour; distraction/usability. No autonomous steering/throttle/braking |
+
+### 8.4 End-to-end experiment protocol
+
+- **P0 — Operational envelope:** define platform, speed/range, environment, user/task, hazards, safety boundary and what “360” must cover.
+- **P1 — Coverage and sensor design:** produce top/side coverage diagrams, field-of-view/range tables, overlap and blind-zone maps. Treat these as design artefacts until measured.
+- **P2 — Calibration:** document calibration target/procedure, coordinate frames, reprojection or geometric residuals, timestamp synchronisation and acceptance thresholds.
+- **P3 — Rights-cleared data:** collect/licence multi-view sequences with asset-level provenance, consent/legal basis, privacy handling and permitted training/test/publication use.
+- **P4 — Annotation:** label objects/events across views, cross-camera correspondences where justified, occlusion, unknown zones and sensor faults. Use bilingual EN/TH guidance and independent adjudication.
+- **P5 — Leakage-resistant splits:** group by site, route, orchard, building, vehicle/robot, capture session and time. All views and frames from the same physical event/session must remain in one partition. Hold out complete sites/routes/platforms for generalisation.
+- **P6 — Baselines:** evaluate each sensor independently; then compare late fusion and geometry/state-based fusion. Include single-view and missing-sensor baselines so fusion benefit is measurable.
+- **P7 — Robustness:** inject camera blackout, lens obstruction, glare, rain, low light, vibration, dropped frames, clock drift, calibration perturbation and conflicting detections. Measure safe abstention and recovery.
+- **P8 — Locked evaluation:** report per-camera, per-angle, range, object class, environment and fused results. Use event/track-level metrics where applicable, calibration and uncertainty intervals; never report only aggregate accuracy.
+- **P9 — Resource and deployment study:** measure actual device latency distribution, throughput, RAM/VRAM, storage, thermal state and energy with a documented measurement boundary. Compare CPU/GPU/NPU scheduling and fallback only on available hardware.
+- **P10 — Independent review:** domain, robotics/vehicle safety, statistics, privacy and lecturer review; publish limitations and unresolved blind spots.
+
+### 8.5 Minimum metrics and statistical safeguards
+
+- Angular coverage: measured visible/observable proportion by azimuth/elevation and defined range bands; state how occlusion and out-of-range regions are counted.
+- Detection/segmentation: per-class precision, recall, AP/mAP or IoU/Dice as appropriate, per-camera and fused.
+- Tracking: IDF1/HOTA/MOTA or a justified task metric, ID switches, fragmentation and cross-camera association error.
+- Geometry: calibration residual, depth/position error and uncertainty against independent measured ground truth.
+- Event/hazard performance: event recall, precision, false alerts per operating hour, missed-event rate and detection/warning delay.
+- Reliability: calibration error, uncertainty quality, abstention coverage, degraded-mode detection, stale-data rate and fault-recovery time.
+- Compute: p50/p95/p99 latency where sample size supports it, throughput, peak memory and measured power/energy.
+- Statistics: cluster resampling at the independent site/route/session/platform level; confidence intervals; predeclared primary endpoint; no frame-level pseudo-replication.
+
+### 8.6 Safety, privacy and claim boundaries
+
+- 360-degree perception is not equivalent to collision avoidance, autonomy or safety certification.
+- No camera arrangement guarantees zero blind spots; document blind, occluded, uncalibrated and unsupported regions.
+- Human subjects, public-road/facility recordings and sensitive locations require applicable permissions, privacy review and ethics approval.
+- Research adapters remain advisory. Vehicle products must not command steering, throttle or braking; mobile robots require separate safety engineering, emergency stop and supervised testing.
+- Do not claim full 360-degree coverage, real-time performance, global generalisation or safe operation until measured under a disclosed protocol.
+- Synthetic simulation, offline dataset testing and physical trials are separate evidence classes and must be reported separately.
+
+### 8.7 Thai-language research and lecturer materials
+
+Provide Thai/English versions of the sensor glossary, calibration procedure, coverage/occlusion annotation guide, fault taxonomy, experiment protocol, safety notices and result dashboard. Thai translation supports comprehension; it does not validate perception. If Thai speech/text/VLM functions are used, evaluate Thai language performance independently, including local terms and code-switching. Present lecturers with a simple sensor-layout diagram, a worked example from raw views to fused WorldState, a blind-zone failure case, the metrics and the evidence required to pass each gate.
+
+### 8.8 Current 360-degree research status (2026-11-25)
+
+- Common architecture and project-specific study requirements: **specified in this document**.
+- Per-project final sensor BOM and physical camera placements: **not selected/verified here**.
+- Calibrated 360-degree coverage maps: **not recorded**.
+- Rights-cleared synchronized multi-view datasets: **not recorded**.
+- Cross-camera fusion models trained and independently tested: **not recorded**.
+- Physical surround-perception validation: **not recorded**.
+
+This is a research and engineering specification, not a claim that any PUI89 product currently has functioning 360-degree perception.
+
+## 9. ภาคภาษาไทย — กรอบวิจัยการรับรู้รอบทิศทาง 360 องศาแบบครบวงจร
+
+**วัตถุประสงค์:** กำหนดสถาปัตยกรรมวิจัยร่วมสำหรับการรับรู้สภาพแวดล้อมรอบแพลตฟอร์มทั้ง 6 โครงการ โดยคำว่า 360 องศาหมายถึงระบบหลายเซนเซอร์/หลายมุมมองที่ผ่านการวัดพื้นที่ครอบคลุม การปรับเทียบเวลาและตำแหน่ง และการจัดการความไม่แน่นอน ไม่ได้หมายความว่ามองเห็นทุกจุด ไม่มีจุดบอด หรือทำงานปลอดภัยโดยอัตโนมัติ
+
+### 9.1 องค์ประกอบหลัก
+
+1. **ออกแบบพื้นที่มองเห็น:** ระบุตำแหน่งกล้อง มุมรับภาพ ระยะทำงาน พื้นที่ซ้อนทับ สิ่งบดบัง และจุดที่มองไม่เห็น
+2. **ปรับเทียบและซิงโครไนซ์:** ตรวจสอบ Intrinsic/Extrinsic Calibration กรอบพิกัด เวลา ความคลาดเคลื่อนของนาฬิกา และสถานะเซนเซอร์
+3. **ประมวลผลแยกตามเซนเซอร์:** ตรวจจับ แบ่งส่วน ติดตาม และประเมินระยะ/รูปทรง โดยคงข้อมูลแหล่งที่มา
+4. **รวมข้อมูลเชิงพื้นที่:** แปลงข้อมูลเข้าสู่กรอบพิกัดร่วม และแยกพื้นที่ที่พบวัตถุ พื้นที่ว่าง พื้นที่ไม่ทราบ และพื้นที่ถูกบดบังอย่างชัดเจน
+5. **สร้าง World Model:** ระบุตำแหน่ง วัตถุ การเคลื่อนที่ อายุข้อมูล ความเชื่อมั่น และความไม่แน่นอน
+6. **ประเมินบริบทและความเสี่ยง:** แสดงข้อมูลขัดแย้ง สภาวะที่ไม่เคยพบ และยอมงดตัดสินใจเมื่อหลักฐานไม่เพียงพอ
+7. **เสนอแนวทางแบบมีข้อจำกัด:** ส่ง ActionProposal เพื่อการแจ้งเตือนหรือข้อเสนอแนะเท่านั้น ไม่อนุญาตให้ควบคุมยานยนต์หรือหุ่นยนต์โดยตรงจากแผนวิจัยนี้
+8. **จัดเก็บหลักฐาน:** เชื่อมโยงข้อมูล รุ่นโมเดล การปรับเทียบ การทดลอง ข้อผิดพลาด และผลการประเมินให้ตรวจสอบย้อนหลังได้
+
+### 9.2 การประยุกต์ใช้กับทั้ง 6 โครงการ
+
+| โครงการ | เป้าหมายการรับรู้รอบทิศทาง |
+|---|---|
+| Coconut Harvest AI | รับรู้ผลมะพร้าว กิ่ง ลำต้น คน สัตว์ และพื้นที่ทำงานรอบอุปกรณ์เก็บเกี่ยว พร้อมจัดการภาพซ้ำและสิ่งบดบัง |
+| PUI89 Sentinel | เฝ้าสังเกตพื้นที่และเหตุการณ์ในสถานที่ที่ได้รับอนุญาต พร้อมรักษาความเป็นส่วนตัวและหลักฐาน โดยไม่รวมงานยาเสพติด/X-ray/นิติวิทยาศาสตร์ที่ถูกยกเว้น |
+| AI HOME | รับรู้คน เฟอร์นิเจอร์ ประตู สิ่งกีดขวาง และพื้นที่เสี่ยงรอบหุ่นยนต์ภายในอาคาร |
+| AI NOMAD | รับรู้เส้นทาง ภูมิประเทศ สิ่งกีดขวาง คน สัตว์ ความลาดชัน และสภาพอากาศรอบหุ่นยนต์ภายนอก |
+| AI Robot Car | รับรู้รถ คนเดินเท้า ผู้ใช้ถนน สิ่งกีดขวาง และบริบทถนนรอบรถ โดยต้องประเมินมุมกล้องด้านหน้า หลัง และด้านข้างจริง |
+| EasyRide Scooter | รับรู้ถนนและอันตรายในมุมมองผู้ขับขี่สองล้อ พร้อมประเมินจุดบอด การเอียง การสั่นสะเทือน และข้อจำกัดการติดตั้งกล้อง |
+
+### 9.3 ขั้นตอนวิจัยครบวงจร
+
+- P0 กำหนดขอบเขตการทำงานและความหมายของ 360 องศาสำหรับแต่ละโครงการ
+- P1 ออกแบบตำแหน่งเซนเซอร์ แผนภาพพื้นที่ครอบคลุม และจุดบอด
+- P2 ปรับเทียบกล้อง/เซนเซอร์และตรวจสอบการซิงโครไนซ์
+- P3 จัดหาภาพและข้อมูลหลายมุมมองที่มีสิทธิ์ใช้งานถูกต้อง
+- P4 ทำ Annotation สองภาษา พร้อมผู้ตรวจสอบอิสระและการตัดสินกรณีเห็นต่าง
+- P5 แบ่ง Train/Validation/Test โดยไม่ให้ภาพจากเหตุการณ์หรือรอบบันทึกเดียวกันข้ามชุดข้อมูล
+- P6 เปรียบเทียบโมเดลรายเซนเซอร์กับวิธีรวมข้อมูลหลายเซนเซอร์
+- P7 ทดสอบความทนทานต่อกล้องดับ เลนส์ถูกบัง ฝน แสงน้อย การสั่น เวลาเหลื่อม และการปรับเทียบคลาดเคลื่อน
+- P8 ประเมินผลบนชุดทดสอบที่ล็อกไว้ แยกตามกล้อง มุม ระยะ คลาส และสภาพแวดล้อม
+- P9 วัดเวลา หน่วยความจำ อุณหภูมิ และพลังงานบนฮาร์ดแวร์จริง
+- P10 ให้ผู้เชี่ยวชาญ อาจารย์ และผู้ตรวจสอบด้านสถิติ/ความปลอดภัย/ความเป็นส่วนตัวประเมิน
+
+### 9.4 ตัวชี้วัดและข้อควรระวัง
+
+ต้องรายงานพื้นที่มองเห็นจริง จุดบอด ความแม่นยำรายกล้องและหลังรวมข้อมูล การติดตามวัตถุ ความคลาดเคลื่อนเชิงพื้นที่ อัตราแจ้งเตือนผิดพลาด ความล่าช้า ความเชื่อมั่น การงดตัดสินใจ และทรัพยากรประมวลผล พร้อมช่วงความเชื่อมั่นทางสถิติ โดยคำนึงถึงการจัดกลุ่มข้อมูลตามสถานที่ เส้นทาง และรอบบันทึก ไม่ถือว่าแต่ละเฟรมเป็นตัวอย่างอิสระ
+
+### 9.5 สถานะ ณ 25 พฤศจิกายน 2026
+
+- กรอบสถาปัตยกรรมและข้อกำหนดวิจัย 360 องศา: **ระบุไว้ในเอกสารนี้แล้ว**
+- การเลือกฮาร์ดแวร์และตำแหน่งติดตั้งจริง: **ยังไม่มีการยืนยัน**
+- แผนที่พื้นที่ครอบคลุมที่ผ่านการปรับเทียบ: **ยังไม่มีบันทึก**
+- ชุดข้อมูลหลายมุมมองที่ตรวจสอบสิทธิ์แล้ว: **ยังไม่มีบันทึก**
+- โมเดลรวมภาพหลายกล้องที่ฝึกและทดสอบอิสระ: **ยังไม่มีบันทึก**
+- การตรวจสอบกับฮาร์ดแวร์จริง: **ยังไม่มีบันทึก**
+
+เอกสารนี้เป็นข้อกำหนดสำหรับการวิจัย ไม่ใช่หลักฐานว่าผลิตภัณฑ์ PUI89 มีระบบรับรู้ 360 องศาที่ทำงานได้จริงแล้ว
