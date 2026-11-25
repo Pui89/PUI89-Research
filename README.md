@@ -62,6 +62,7 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 
 - [End-to-End Research Plans — All Six Projects](docs/q1-publication/end-to-end/README.md) — six project-specific workflows from literature review and global data rights through train/test design, baselines, statistics, Shared AI Core, Thai edition and manuscript gates.
 - [Six-Project Technology Baseline & Model Map](docs/q1-publication/TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) — latest repository-defined stacks, candidate models, sensor modalities, robotics/simulation foundations, status and research comparisons for all six projects.
+- [360-Degree Perception Validation & Benchmark Protocol](docs/q1-publication/360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md) — measurable coverage, calibration, sensor-fusion baselines, fault injection, six-project metrics, statistical safeguards and edge benchmarks.
 - [Free/Open-Source Implementation Plan](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — independent Q1 study plans, selected free tooling, baselines, ablations, metrics and staged implementation gates.
 - [Lightweight Research Utilities](research_tools/README.md) — dependency-free dataset leakage audit and experiment-record tooling.
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
