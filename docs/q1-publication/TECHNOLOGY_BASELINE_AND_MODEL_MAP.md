@@ -388,3 +388,8 @@ This is a research and engineering specification, not a claim that any PUI89 pro
 - การตรวจสอบกับฮาร์ดแวร์จริง: **ยังไม่มีบันทึก**
 
 เอกสารนี้เป็นข้อกำหนดสำหรับการวิจัย ไม่ใช่หลักฐานว่าผลิตภัณฑ์ PUI89 มีระบบรับรู้ 360 องศาที่ทำงานได้จริงแล้ว
+
+
+## 10. Validation protocol
+
+The architecture above is paired with a separate [360-Degree Perception Validation and Benchmark Protocol](360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md). Use it to define measurable coverage/calibration evidence, single-sensor and fusion baselines, ground truth, fault injection, per-project metrics, statistical safeguards, edge benchmarks and validation gates. It is a proposed protocol; no product is considered validated merely because the protocol exists.
