@@ -58,6 +58,7 @@ PUI89-Research มุ่งศึกษาปัญญาประดิษฐ�
 
 - [แผนวิจัยแบบครบวงจรทั้ง 6 โครงการ (End-to-End)](docs/q1-publication/end-to-end/README.md) — แผนรายโครงการตั้งแต่ทบทวนวรรณกรรม ค้นหาภาพจริงทั่วโลก ตรวจสอบสิทธิ์ แบ่ง Train/Validation/Test ทดลอง วิเคราะห์สถิติ เชื่อมต่อ Shared AI Core จนถึงเตรียมต้นฉบับ
 - [เทคโนโลยีล่าสุดและแผนผังโมเดลทั้ง 6 โครงการ](docs/q1-publication/TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) — สรุปเทคโนโลยีที่ระบุใน Repository โมเดลที่อยู่ระหว่างพิจารณา เซนเซอร์ ระบบหุ่นยนต์/จำลองสถานการณ์ สถานะ และแนวทางทดลองวิจัยของทั้ง 6 โครงการ
+- [แนวทางตรวจสอบและ Benchmark ระบบรับรู้ 360 องศา](docs/q1-publication/360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md) — การวัดพื้นที่ครอบคลุม Calibration, Sensor Fusion, Fault Injection, ตัวชี้วัดทั้ง 6 โครงการ และการทดสอบ Edge AI
 - [แผนการพัฒนาด้วยเทคโนโลยี Free/Open Source](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — แผนวิจัย Q1 แยก 6 เรื่อง เครื่องมือที่แนะนำ วิธีเปรียบเทียบ Ablation ตัวชี้วัด และขั้นตอนการพัฒนา
 - [เครื่องมือวิจัยขนาดเล็ก](research_tools/README.md) — เครื่องมือตรวจสอบ Data Leakage และบันทึกการทดลองที่ไม่ต้องติดตั้งไลบรารีภายนอก
 - [โครงการเตรียมผลงานวิจัยเพื่อส่งวารสาร Q1](docs/q1-publication/README.md) — ขั้นตอนและเกณฑ์หลักฐานร่วมสำหรับทั้ง 6 โครงการ
