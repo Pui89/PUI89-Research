@@ -79,3 +79,4 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 ## About
 
 PUI89-Research is an independent research programme. Project names describe research directions and do not imply a registered company, institutional affiliation, endorsement or validated product capability. Use the GitHub Issues tab for research questions and corrections.
+\n\n## Hybrid End-to-End Multimodal AI\n[Hybrid End-to-End Multimodal AI — Six-Project Research Plan](docs/q1-publication/end-to-end/HYBRID_END_TO_END_MULTIMODAL_AI_SIX_PROJECT_PLAN.md) — proposed architecture and project-specific adoption plan. E2E benefits require comparative evidence; product boundaries, independent safety and evidence gates remain mandatory.\n
