@@ -57,12 +57,15 @@ PUI89-Research มุ่งศึกษาปัญญาประดิษฐ�
 ## ระบบสนับสนุนการตีพิมพ์งานวิจัย
 
 - [เทคโนโลยีล่าสุดและแผนผังโมเดลทั้ง 6 โครงการ](docs/q1-publication/TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) — สรุปเทคโนโลยีที่ระบุใน Repository โมเดลที่อยู่ระหว่างพิจารณา เซนเซอร์ ระบบหุ่นยนต์/จำลองสถานการณ์ สถานะ และแนวทางทดลองวิจัยของทั้ง 6 โครงการ
+- [แผนการพัฒนาด้วยเทคโนโลยี Free/Open Source](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — แผนวิจัย Q1 แยก 6 เรื่อง เครื่องมือที่แนะนำ วิธีเปรียบเทียบ Ablation ตัวชี้วัด และขั้นตอนการพัฒนา
+- [เครื่องมือวิจัยขนาดเล็ก](research_tools/README.md) — เครื่องมือตรวจสอบ Data Leakage และบันทึกการทดลองที่ไม่ต้องติดตั้งไลบรารีภายนอก
 - [โครงการเตรียมผลงานวิจัยเพื่อส่งวารสาร Q1](docs/q1-publication/README.md) — ขั้นตอนและเกณฑ์หลักฐานร่วมสำหรับทั้ง 6 โครงการ
 - [กรอบการศึกษาวิจัยทั้ง 6 โครงการ](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — คำถามวิจัย วิธีทดลอง Baseline ตัวชี้วัด และขอบเขตการตรวจสอบ
 - [มาตรฐานต้นฉบับและสถิติ](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — การทบทวนวรรณกรรม การออกแบบสถิติ การทำซ้ำผล จริยธรรม และการตรวจสอบวารสาร
 - [การเชื่อมต่อ Shared AI Core](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — สัญญาข้อมูลที่ตรึงเวอร์ชันและหลักเกณฑ์ Adapter
 - [แม่แบบบันทึกการทดลอง](docs/q1-publication/EXPERIMENT_RECORD_TEMPLATE.md) — บันทึกเวอร์ชันและหลักฐานของทุกการทดลอง
 - [JSON Schema สำหรับบันทึกการทดลอง](schemas/research-experiment.schema.json) — โครงสร้างข้อมูลมาตรฐานที่เครื่องอ่านได้
+- [Q1 Experiment Record Schema](research_tools/experiment_record.schema.json) — โครงสร้างข้อมูลที่บันทึกโมเดล ใบอนุญาต การแบ่งชุดข้อมูล ฮาร์ดแวร์ ประสิทธิภาพ Ablation และกรณีล้มเหลว
 
 ## เกี่ยวกับโครงการ
 

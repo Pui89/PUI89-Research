@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PUI89 Q1 Experiment Record",
+  "type": "object",
+  "required": [
+    "study_id",
+    "project",
+    "experiment_id",
+    "git_commit",
+    "dataset_manifest_sha256",
+    "split_protocol",
+    "model",
+    "seed",
+    "hardware",
+    "metrics",
+    "status"
+  ],
+  "properties": {
+    "study_id": {
+      "type": "string"
+    },
+    "project": {
+      "enum": [
+        "coconut_harvest_ai",
+        "sentinel",
+        "ai_home",
+        "ai_nomad",
+        "ai_robot_car",
+        "easyride_step_through_scooter"
+      ]
+    },
+    "experiment_id": {
+      "type": "string"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "git_commit": {
+      "type": "string"
+    },
+    "dataset_manifest_sha256": {
+      "type": "string"
+    },
+    "split_protocol": {
+      "type": "string"
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "name",
+        "revision",
+        "weights_license_review"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "weights_license_review": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        },
+        "checkpoint_sha256": {
+          "type": "string"
+        },
+        "precision": {
+          "type": "string"
+        }
+      }
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "hardware": {
+      "type": "object",
+      "required": [
+        "cpu"
+      ],
+      "properties": {
+        "cpu": {
+          "type": "string"
+        },
+        "gpu": {
+          "type": "string"
+        },
+        "npu": {
+          "type": "string"
+        },
+        "mcu": {
+          "type": "string"
+        },
+        "ram_gb": {
+          "type": "number"
+        },
+        "vram_gb": {
+          "type": "number"
+        },
+        "os": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "batch_size": {
+          "type": "integer"
+        },
+        "latency_ms_p50": {
+          "type": "number"
+        },
+        "latency_ms_p95": {
+          "type": "number"
+        },
+        "throughput_per_s": {
+          "type": "number"
+        },
+        "peak_ram_mb": {
+          "type": "number"
+        },
+        "peak_vram_mb": {
+          "type": "number"
+        },
+        "energy_j_per_sample": {
+          "type": "number"
+        },
+        "energy_measurement_method": {
+          "type": "string"
+        }
+      }
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "ablation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainty_method": {
+      "type": "string"
+    },
+    "simulation_or_physical": {
+      "enum": [
+        "offline",
+        "simulation",
+        "bench",
+        "physical"
+      ]
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "running",
+        "completed",
+        "failed",
+        "excluded"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

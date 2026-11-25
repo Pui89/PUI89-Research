@@ -61,12 +61,15 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 ## Research publication programme
 
 - [Six-Project Technology Baseline & Model Map](docs/q1-publication/TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) — latest repository-defined stacks, candidate models, sensor modalities, robotics/simulation foundations, status and research comparisons for all six projects.
+- [Free/Open-Source Implementation Plan](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — independent Q1 study plans, selected free tooling, baselines, ablations, metrics and staged implementation gates.
+- [Lightweight Research Utilities](research_tools/README.md) — dependency-free dataset leakage audit and experiment-record tooling.
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
 - [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
 - [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.
 - [Shared AI Core Integration](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — pinned contract snapshots and research adapter rules.
 - [Experiment Record Template](docs/q1-publication/EXPERIMENT_RECORD_TEMPLATE.md) — versioned record for every experiment.
 - [Research Experiment JSON Schema](schemas/research-experiment.schema.json) — machine-readable experiment record.
+- [Q1 Experiment Record Schema](research_tools/experiment_record.schema.json) — records model revision, licence review, split, hardware, runtime, metrics, ablations and failures.
 
 ## About
 
