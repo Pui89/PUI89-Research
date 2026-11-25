@@ -66,7 +66,11 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
 - [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
 - [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.
-- [Shared AI Core Integration](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — pinned contract snapshots and research adapter rules.
+- [Why These Studies, Why Q1 & Reference Library](docs/q1-publication/WHY_Q1_AND_REFERENCE_LIBRARY.md) — research rationale, Q1 timing, journal verification and DOI/source links.
+- [Research Lectures & Contributor Framework](docs/q1-publication/LECTURES_AND_RESEARCH_TEAM.md) — plain-language lecture series, expert roles and contributor standards.
+- [Global Real-World Image & Dataset Protocol](docs/q1-publication/GLOBAL_IMAGE_DATA_AND_TRAIN_TEST_PROTOCOL.md) — worldwide source discovery, image rights, annotation, leakage-resistant splits and train/test gates.
+- [Monthly & Annual Research Status](docs/q1-publication/RESEARCH_STATUS_AND_MONTHLY_LOG.md) — dated portfolio snapshot, evidence status and reporting templates.
+- [Shared AI Core Integration](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — pinned contract snapshots, PUI89 model governance and Thai-language evaluation requirements.
 - [Experiment Record Template](docs/q1-publication/EXPERIMENT_RECORD_TEMPLATE.md) — versioned record for every experiment.
 - [Research Experiment JSON Schema](schemas/research-experiment.schema.json) — machine-readable experiment record.
 - [Q1 Experiment Record Schema](research_tools/experiment_record.schema.json) — records model revision, licence review, split, hardware, runtime, metrics, ablations and failures.
