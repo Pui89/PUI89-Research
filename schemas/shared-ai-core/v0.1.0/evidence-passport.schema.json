@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pui89.github.io/schemas/v0.1/evidence-passport.schema.json",
+  "title": "PUI89 Evidence Passport",
+  "description": "A traceable record explaining the evidence, uncertainty, safety review and verification status behind an AI conclusion. It grants no execution authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "passport_id", "created_at", "project_id", "conclusion", "evidence", "uncertainty", "safety", "human_review", "verification", "execution_authorized"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "passport_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "subject_ref": { "type": "string" },
+    "conclusion": {
+      "type": "object", "additionalProperties": false, "required": ["statement", "status"],
+      "properties": {
+        "statement": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "enum": ["supported", "conditional", "withheld", "unknown"] }
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false, "required": ["supporting_refs", "conflicting_refs", "missing_items", "provenance_status"],
+      "properties": {
+        "supporting_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "conflicting_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "missing_items": { "type": "array", "items": { "type": "string" } },
+        "provenance_status": { "type": "string", "enum": ["complete", "partial", "unknown"] }
+      }
+    },
+    "uncertainty": {
+      "type": "object", "additionalProperties": false, "required": ["description", "assessment_method", "calibration_status"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1 },
+        "assessment_method": { "type": "string", "minLength": 1 },
+        "calibration_status": { "type": "string", "enum": ["not_assessed", "uncalibrated", "calibrated", "unknown"] }
+      }
+    },
+    "safety": {
+      "type": "object", "additionalProperties": false, "required": ["gate_status", "risk_level"],
+      "properties": {
+        "gate_status": { "type": "string", "enum": ["passed", "blocked", "not_evaluated"] },
+        "risk_level": { "type": "string", "enum": ["low", "moderate", "high", "critical", "unknown"] },
+        "gate_notes": { "type": "string" }
+      }
+    },
+    "human_review": {
+      "type": "object", "additionalProperties": false, "required": ["review_required", "status"],
+      "properties": {
+        "review_required": { "const": true },
+        "status": { "type": "string", "enum": ["not_reviewed", "pending", "approved", "rejected"] },
+        "reviewer_ref": { "type": "string" },
+        "reviewed_at": { "type": "string", "format": "date-time" },
+        "review_notes": { "type": "string" }
+      }
+    },
+    "verification": {
+      "type": "object", "additionalProperties": false, "required": ["status", "evidence_refs"],
+      "properties": {
+        "status": { "type": "string", "enum": ["not_tested", "passed", "failed", "unknown"] },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "verification_scope": { "type": "string" }
+      }
+    },
+    "execution_authorized": { "const": false }
+  }
+}

@@ -58,6 +58,15 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 
 - [ภาษาไทย — ภาพรวม 6 โครงการ](README.th.md)
 
+## Research publication programme
+
+- [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
+- [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
+- [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.
+- [Shared AI Core Integration](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — pinned contract snapshots and research adapter rules.
+- [Experiment Record Template](docs/q1-publication/EXPERIMENT_RECORD_TEMPLATE.md) — versioned record for every experiment.
+- [Research Experiment JSON Schema](schemas/research-experiment.schema.json) — machine-readable experiment record.
+
 ## About
 
 PUI89-Research is an independent research programme. Project names describe research directions and do not imply a registered company, institutional affiliation, endorsement or validated product capability. Use the GitHub Issues tab for research questions and corrections.

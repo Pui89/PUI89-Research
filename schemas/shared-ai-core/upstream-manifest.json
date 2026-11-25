@@ -1,0 +1,40 @@
+{
+  "manifest_version": "1.0.0",
+  "upstream_repository": "Pui89/PUI89-Shared-AI-Core",
+  "upstream_ref": "main",
+  "upstream_commit": "50e756588ce23aa23463e72fca208b08ff50d1d3",
+  "snapshot_date": "2026-11-25",
+  "snapshot_policy": "Exact schema snapshots copied for independent research reproducibility. Do not edit silently; update only with a new upstream pin and migration review.",
+  "schemas": [
+    {
+      "name": "observation",
+      "upstream_path": "schemas/v0.1/observation.schema.json",
+      "local_path": "schemas/shared-ai-core/v0.1.0/observation.schema.json",
+      "upstream_blob_sha": "9822297a8ba4836d690bd4295bec042771344f0c"
+    },
+    {
+      "name": "world_state",
+      "upstream_path": "schemas/v0.1/world-state.schema.json",
+      "local_path": "schemas/shared-ai-core/v0.1.0/world-state.schema.json",
+      "upstream_blob_sha": "9b585cdbd6798254503af2911cd4ef27f0a3cd94"
+    },
+    {
+      "name": "action_proposal",
+      "upstream_path": "schemas/v0.1/action-proposal.schema.json",
+      "local_path": "schemas/shared-ai-core/v0.1.0/action-proposal.schema.json",
+      "upstream_blob_sha": "65bef8fb2ddf3053707909b76068f0f099ba4375"
+    },
+    {
+      "name": "failure_report",
+      "upstream_path": "schemas/v0.1/failure-report.schema.json",
+      "local_path": "schemas/shared-ai-core/v0.1.0/failure-report.schema.json",
+      "upstream_blob_sha": "a7017852cbbd1fc88e47b3ad2d44f80f24d09704"
+    },
+    {
+      "name": "evidence_passport",
+      "upstream_path": "schemas/v0.1/evidence-passport.schema.json",
+      "local_path": "schemas/shared-ai-core/v0.1.0/evidence-passport.schema.json",
+      "upstream_blob_sha": "80dace0437b2a273f9fa435e828fa72341e2f741"
+    }
+  ]
+}
