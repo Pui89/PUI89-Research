@@ -60,6 +60,7 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 
 ## Research publication programme
 
+- [Six-Project Technology Baseline & Model Map](docs/q1-publication/TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) — latest repository-defined stacks, candidate models, sensor modalities, robotics/simulation foundations, status and research comparisons for all six projects.
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
 - [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
 - [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.

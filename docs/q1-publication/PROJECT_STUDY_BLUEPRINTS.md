@@ -2,6 +2,8 @@
 
 **Status: Candidate study designs for literature review and protocol development. These are not confirmed research gaps, novelty claims, approved protocols, or completed experiments.**
 
+See the [Six-Project Technology Baseline & Model Map](TECHNOLOGY_BASELINE_AND_MODEL_MAP.md) for the latest repository-defined model families, sensor modalities, robotics/simulation foundations, technology status and unresolved selection conflicts. Treat candidate technologies as unapproved until their provenance, licence, resource fit and task-specific evaluation gates pass.
+
 Each study must first establish that its question is genuinely unresolved in the current literature. The candidate titles below are working titles only.
 
 ## 01 — Coconut Harvest AI
