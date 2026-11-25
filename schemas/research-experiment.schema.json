@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pui89.github.io/research/schemas/research-experiment.schema.json",
+  "title": "PUI89 Research Experiment Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "experiment_id",
+    "project_id",
+    "study_id",
+    "status",
+    "protocol_version",
+    "research_question",
+    "primary_outcome",
+    "dataset",
+    "method",
+    "execution",
+    "analysis_plan",
+    "evidence_class"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "project_id": {
+      "type": "string",
+      "enum": [
+        "coconut-harvest-ai",
+        "sentinel",
+        "ai-home",
+        "ai-nomad",
+        "ai-robot-car",
+        "easyrider-ai-scooter"
+      ]
+    },
+    "study_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "approved", "running", "complete", "failed", "superseded"]
+    },
+    "protocol_version": { "type": "string", "minLength": 1 },
+    "research_question": { "type": "string", "minLength": 1 },
+    "primary_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "unit_of_analysis", "definition"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "unit_of_analysis": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string", "minLength": 1 }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_id", "version", "manifest_sha256", "rights_status", "split_method"],
+      "properties": {
+        "dataset_id": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "manifest_sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+        "rights_status": {
+          "type": "string",
+          "enum": ["verified_permitted", "pending", "restricted", "rejected"]
+        },
+        "split_method": { "type": "string", "minLength": 1 },
+        "leakage_group_key": { "type": "string" },
+        "ethics_reference": { "type": "string" }
+      }
+    },
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "code_commit", "baselines", "random_seeds"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "code_commit": { "type": "string", "pattern": "^[a-fA-F0-9]{7,40}$" },
+        "model_revision": { "type": "string" },
+        "checkpoint_sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+        "baselines": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "random_seeds": { "type": "array", "items": { "type": "integer" }, "minItems": 1 },
+        "preprocessing": { "type": "string" },
+        "threshold_policy": { "type": "string" }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["environment", "hardware", "network_accessed"],
+      "properties": {
+        "environment": { "type": "string", "minLength": 1 },
+        "hardware": { "type": "string", "minLength": 1 },
+        "software_versions": { "type": "object", "additionalProperties": { "type": "string" } },
+        "network_accessed": { "type": "boolean" },
+        "runtime_seconds": { "type": "number", "minimum": 0 },
+        "peak_memory_mb": { "type": "number", "minimum": 0 }
+      }
+    },
+    "analysis_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sample_size_rationale", "statistical_methods", "multiple_comparison_policy", "missing_data_policy"],
+      "properties": {
+        "sample_size_rationale": { "type": "string", "minLength": 1 },
+        "statistical_methods": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "multiple_comparison_policy": { "type": "string", "minLength": 1 },
+        "missing_data_policy": { "type": "string", "minLength": 1 },
+        "confidence_interval_method": { "type": "string" },
+        "primary_test_frozen_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": ["measured", "synthetic", "simulated", "estimated"]
+    },
+    "result_record_refs": { "type": "array", "items": { "type": "string" } },
+    "failure_report_refs": { "type": "array", "items": { "type": "string" } },
+    "evidence_passport_refs": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "independent_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "type": "string", "enum": ["not_reviewed", "pending", "approved", "rejected"] },
+        "reviewer_ref": { "type": "string" },
+        "reviewed_at": { "type": "string", "format": "date-time" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
