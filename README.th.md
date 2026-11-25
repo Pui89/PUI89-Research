@@ -62,7 +62,11 @@ PUI89-Research มุ่งศึกษาปัญญาประดิษฐ�
 - [โครงการเตรียมผลงานวิจัยเพื่อส่งวารสาร Q1](docs/q1-publication/README.md) — ขั้นตอนและเกณฑ์หลักฐานร่วมสำหรับทั้ง 6 โครงการ
 - [กรอบการศึกษาวิจัยทั้ง 6 โครงการ](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — คำถามวิจัย วิธีทดลอง Baseline ตัวชี้วัด และขอบเขตการตรวจสอบ
 - [มาตรฐานต้นฉบับและสถิติ](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — การทบทวนวรรณกรรม การออกแบบสถิติ การทำซ้ำผล จริยธรรม และการตรวจสอบวารสาร
-- [การเชื่อมต่อ Shared AI Core](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — สัญญาข้อมูลที่ตรึงเวอร์ชันและหลักเกณฑ์ Adapter
+- [เหตุผลในการทำวิจัย เป้าหมาย Q1 และคลังเอกสารอ้างอิง](docs/q1-publication/WHY_Q1_AND_REFERENCE_LIBRARY.md) — เหตุผลของแต่ละหัวข้อ ช่วงเวลาเตรียม Q1 และลิงก์ DOI/แหล่งข้อมูล
+- [บทเรียนวิจัยและกรอบผู้ร่วมวิจัย](docs/q1-publication/LECTURES_AND_RESEARCH_TEAM.md) — บทเรียนภาษาง่าย บทบาทผู้เชี่ยวชาญ และมาตรฐานผู้ร่วมวิจัย
+- [แนวทางภาพจริงและชุดข้อมูลทั่วโลก](docs/q1-publication/GLOBAL_IMAGE_DATA_AND_TRAIN_TEST_PROTOCOL.md) — การค้นหาแหล่งภาพทั่วโลก สิทธิ์ภาพ Annotation และการแบ่ง Train/Test เพื่อป้องกัน Data Leakage
+- [สถานะวิจัยรายเดือนและรายปี](docs/q1-publication/RESEARCH_STATUS_AND_MONTHLY_LOG.md) — ภาพรวมที่ระบุวันที่ สถานะหลักฐาน และแบบบันทึกความก้าวหน้า
+- [การเชื่อมต่อ Shared AI Core](docs/q1-publication/SHARED_AI_CORE_INTEGRATION.md) — สัญญาข้อมูลที่ตรึงเวอร์ชัน หลักเกณฑ์โมเดล PUI89 และการประเมินภาษาไทย
 - [แม่แบบบันทึกการทดลอง](docs/q1-publication/EXPERIMENT_RECORD_TEMPLATE.md) — บันทึกเวอร์ชันและหลักฐานของทุกการทดลอง
 - [JSON Schema สำหรับบันทึกการทดลอง](schemas/research-experiment.schema.json) — โครงสร้างข้อมูลมาตรฐานที่เครื่องอ่านได้
 - [Q1 Experiment Record Schema](research_tools/experiment_record.schema.json) — โครงสร้างข้อมูลที่บันทึกโมเดล ใบอนุญาต การแบ่งชุดข้อมูล ฮาร์ดแวร์ ประสิทธิภาพ Ablation และกรณีล้มเหลว
