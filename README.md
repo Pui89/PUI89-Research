@@ -13,22 +13,29 @@ PUI89-Research develops evidence-based, resource-aware and reliable AI research 
 ### 01 — Coconut Harvest AI
 **Agricultural computer vision and coconut maturity assessment.** Studies image-based classification of defined maturity classes, dataset quality, annotation consistency, evaluation and lightweight CPU inference.
 
-### 02 — PUI89 Sentinel
+### 02 — PUI89 Sentinel — Quadruped Environmental Inspection Robot
 **Multimodal perception, evidence-aware AI and decision support.** Studies permitted information modalities, uncertainty communication, evidence provenance and human review. Each study must define its application scope and verify data rights before use.
 
 **Scope exclusion:** Narcotics detection and screening, related datasets, X-ray screening and associated forensic spectral research are outside the active scope of this programme.
 
-### 03 — AI HOME
+### 03 — PUI89 AI HOME — Indoor Assistance Robot
 **Indoor assistive robotics and reliable embodied AI.** Studies indoor perception, environmental understanding, human-aware assistance, safe action proposals and dependable operation for a compact mobile assistant.
 
-### 04 — AI NOMAD
+### 04 — PUI89 AI NOMAD — Compact Four-Wheel Mobile Assistant
 **Outdoor mobile robotics and robust perception.** Studies outdoor context, perception under changing conditions, uncertainty handling and safe behaviour for a compact mobile assistant distinct from AI HOME.
 
-### 05 — AI Robot Car
+### 05 — PUI89 AI Global SUV
 **Smart mobility, vehicle perception and safety-aware intelligence.** Studies road-scene understanding, obstacle and hazard awareness, environmental context, warnings and reliable edge inference. This research does not imply autonomous steering, throttle or braking.
 
-### 06 — EasyRide AI Step-Through Scooter
+### 06 — PUI89 AI Step-Through Scooter
 **AI-assisted two-wheel mobility and road-safety intelligence.** Studies rider-support information, road and obstacle awareness, environmental warnings, vehicle condition monitoring and edge AI. This research does not imply autonomous throttle, steering or braking.
+
+## Canonical product register
+
+- [Canonical Product Register — English](docs/CANONICAL_PRODUCT_REGISTER.md)
+- [ทะเบียนผลิตภัณฑ์ฉบับภาษาไทย](docs/CANONICAL_PRODUCT_REGISTER.th.md)
+
+The register defines the six active product identities, shared platform boundaries, retired historical scope and evidence-status rules. It does not claim that any product is built or validated.
 
 ## Shared research method
 
