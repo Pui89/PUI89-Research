@@ -21,8 +21,8 @@ PUI89-Research develops evidence-based, resource-aware and reliable AI research 
 ### 03 — PUI89 AI HOME — Indoor Assistance Robot
 **Indoor assistive robotics and reliable embodied AI.** Studies indoor perception, environmental understanding, human-aware assistance, safe action proposals and dependable operation for a compact mobile assistant.
 
-### 04 — PUI89 AI NOMAD — Compact Four-Wheel Mobile Assistant
-**Outdoor mobile robotics and robust perception.** Studies outdoor context, perception under changing conditions, uncertainty handling and safe behaviour for a compact mobile assistant distinct from AI HOME.
+### 04 — PUI89 AI NOMAD — Suitcase-Style Four-Wheel Mobile Assistant
+**Suitcase-style four-wheel mobile robotics and robust perception.** Studies mobile perception, obstacle awareness, uncertainty handling and safe user-directed behaviour for a compact wheeled assistant distinct from AI HOME.
 
 ### 05 — PUI89 AI Global SUV
 **Smart mobility, vehicle perception and safety-aware intelligence.** Studies road-scene understanding, obstacle and hazard awareness, environmental context, warnings and reliable edge inference. This research does not imply autonomous steering, throttle or braking.
