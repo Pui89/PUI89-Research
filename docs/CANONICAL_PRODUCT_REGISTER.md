@@ -13,7 +13,7 @@ This register defines the six active PUI89 product identities used by the indepe
 | 1 | **Coconut Harvest AI** | Agricultural AI for coconut maturity assessment and harvesting-support research. | Image-based maturity understanding and evidence-led harvesting research. Do not claim validated harvesting or field performance without evidence. |
 | 2 | **PUI89 Sentinel — Quadruped Environmental Inspection Robot** | Supervised quadruped robot concept for environmental inspection, situational awareness and evidence capture. | Inspection and environmental perception only. Narcotics detection/screening, X-ray screening and associated forensic datasets are excluded. No autonomous all-terrain capability is implied. |
 | 3 | **PUI89 AI HOME — Indoor Assistance Robot** | Compact four-wheel indoor assistance robot. | Indoor assistance and environment awareness. Distinct from NOMAD; no validated home-safety protection or autonomous operation is implied. |
-| 4 | **PUI89 AI NOMAD — Compact Four-Wheel Mobile Assistant** | Compact, dog-inspired four-wheel mobile assistant with an integrated carrying/handling feature. | User-directed mobile assistance. It is not a suitcase/travel-luggage product and is not claimed to autonomously follow a person. Distinct from indoor-focused HOME. |
+| 4 | **PUI89 AI NOMAD — Compact Four-Wheel Mobile Assistant** | Compact suitcase-style mobile assistant with four wheels and an integrated handling feature. | User-directed mobile assistance. Its enclosure is suitcase-shaped and rolls on four wheels; it is a mobile assistant, not ordinary travel luggage. No autonomous following is claimed. Distinct from indoor-focused HOME. |
 | 5 | **PUI89 AI Global SUV** | Five-door, five-seat global SUV concept with AI-assisted mobility and driver-support research. | Vehicle perception, road/environment context and advisory intelligence. “AI Robot Car” is a legacy shorthand, not the canonical product name. No autonomous steering, throttle or braking is implied. |
 | 6 | **PUI89 AI Step-Through Scooter** | Rider-first two-wheel step-through scooter concept with AI-assisted mobility and safety-support research. | Road/obstacle awareness, environmental warnings and vehicle-condition information. “EasyRide AI” and “AI Motorcycle” are legacy names. No autonomous steering, throttle or braking is implied. |
 
@@ -58,7 +58,7 @@ Do not infer sensor installation, model performance, safety, certification, payl
 ## 7. Alignment checklist
 
 - [ ] Six active product names and descriptions match this register.
-- [ ] NOMAD is consistently represented as the dog-inspired compact four-wheel assistant, never as a suitcase.
+- [ ] NOMAD is consistently represented as a suitcase-style mobile assistant with four wheels; do not describe it as dog-inspired or as a four-legged robot.
 - [ ] Sentinel uses the Quadruped Environmental Inspection Robot identity and excludes narcotics/X-ray screening.
 - [ ] AI Global SUV is the canonical vehicle name; AI Robot Car is legacy shorthand only.
 - [ ] AI Step-Through Scooter is canonical; EasyRide AI / AI Motorcycle are legacy names only.
