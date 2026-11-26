@@ -87,3 +87,8 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 ## About
 
 PUI89-Research is an independent research programme. Project names describe research directions and do not imply a registered company, institutional affiliation, endorsement or validated product capability. Use the GitHub Issues tab for research questions and corrections.
+
+
+## Product Environmental, Material & Safety Qualification
+
+All six product research tracks reference the [PUI89 Six-Product Environmental, Material & Safety Qualification Framework](https://github.com/Pui89/PUI89-Shared-AI-Core/blob/main/docs/standards/PUI89_SIX_PRODUCT_ENVIRONMENTAL_MATERIAL_SAFETY_QUALIFICATION_V1.0.md). Environmental ratings, material candidates, fire/battery requirements and product-specific test gates are proposed research requirements until exact hardware configurations are specified and independently tested. This reference does not establish physical performance or certification.
