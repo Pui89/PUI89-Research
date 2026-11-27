@@ -68,6 +68,7 @@ PUI89-Research มุ่งศึกษาปัญญาประดิษฐ�
 - [แนวทางตรวจสอบและ Benchmark ระบบรับรู้ 360 องศา](docs/q1-publication/360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md) — การวัดพื้นที่ครอบคลุม Calibration, Sensor Fusion, Fault Injection, ตัวชี้วัดทั้ง 6 โครงการ และการทดสอบ Edge AI
 - [แผนการพัฒนาด้วยเทคโนโลยี Free/Open Source](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — แผนวิจัย Q1 แยก 6 เรื่อง เครื่องมือที่แนะนำ วิธีเปรียบเทียบ Ablation ตัวชี้วัด และขั้นตอนการพัฒนา
 - [เครื่องมือวิจัยขนาดเล็ก](research_tools/README.md) — เครื่องมือตรวจสอบ Data Leakage และบันทึกการทดลองที่ไม่ต้องติดตั้งไลบรารีภายนอก
+- [แนวทางผลิตวิดีโอภายในเครื่องด้วย FreeCut](docs/FREECUT_LOCAL_VIDEO_PRODUCTION_WORKFLOW.md) — Workflow ตัดต่อวิดีโอผ่าน Browser แบบ Local-first สำหรับสื่อวิจัยและผลิตภัณฑ์ทั้ง 7 รายการ โดยแยกจากหลักฐานวิจัย เครื่องมือทดลอง และการตรวจสอบผล
 - [โครงการเตรียมผลงานวิจัยเพื่อส่งวารสาร Q1](docs/q1-publication/README.md) — ขั้นตอนและเกณฑ์หลักฐานร่วมสำหรับทั้ง 6 โครงการ
 - [กรอบการศึกษาวิจัยทั้ง 6 โครงการ](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — คำถามวิจัย วิธีทดลอง Baseline ตัวชี้วัด และขอบเขตการตรวจสอบ
 - [มาตรฐานต้นฉบับและสถิติ](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — การทบทวนวรรณกรรม การออกแบบสถิติ การทำซ้ำผล จริยธรรม และการตรวจสอบวารสาร

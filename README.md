@@ -72,6 +72,7 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 - [360-Degree Perception Validation & Benchmark Protocol](docs/q1-publication/360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md) — measurable coverage, calibration, sensor-fusion baselines, fault injection, six-project metrics, statistical safeguards and edge benchmarks.
 - [Free/Open-Source Implementation Plan](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — independent Q1 study plans, selected free tooling, baselines, ablations, metrics and staged implementation gates.
 - [Lightweight Research Utilities](research_tools/README.md) — dependency-free dataset leakage audit and experiment-record tooling.
+- [FreeCut Local Video Production Workflow](docs/FREECUT_LOCAL_VIDEO_PRODUCTION_WORKFLOW.md) — optional browser-based local-first video editing for research explainers and all seven product communication tracks; separate from research evidence, experiment tooling and validation.
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
 - [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
 - [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.
