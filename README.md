@@ -85,6 +85,8 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 - [Research Experiment JSON Schema](schemas/research-experiment.schema.json) — machine-readable experiment record.
 - [Q1 Experiment Record Schema](research_tools/experiment_record.schema.json) — records model revision, licence review, split, hardware, runtime, metrics, ablations and failures.
 
+- [Prototype BOM & Cost Framework — All Six Products](docs/PROTOTYPE_BOM_AND_COST_FRAMEWORK.md) — component categories, origin/quotation evidence, cost worksheet and no-double-counting rules; unverified prices remain TBD.
+
 ## About
 
 PUI89-Research is an independent research programme. Project names describe research directions and do not imply a registered company, institutional affiliation, endorsement or validated product capability. Use the GitHub Issues tab for research questions and corrections.
