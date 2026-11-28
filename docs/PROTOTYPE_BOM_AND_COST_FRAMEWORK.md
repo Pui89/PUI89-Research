@@ -49,6 +49,21 @@ This document establishes a consistent way to scope hardware, materials, compone
 
 These groups are research scoping categories, not selected parts or validated designs. For the SUV and scooter, vehicle-level systems must be engineered and validated by qualified specialists under applicable regulations.
 
+
+
+## 3A. Current prototype-cost status by product
+
+| Product | First prototype scope to cost | Verified prototype cost | Main unresolved cost drivers |
+|---|---|---|---|
+| Coconut Harvest AI | Controlled RGB vision bench demonstrator; not a complete orchard-harvesting robot | **TBD** | Camera/lens, lighting, mount, compute reuse, calibration and fabrication configuration |
+| Sentinel — All-Terrain Inspection Robot Dog | Supervised quadruped inspection demonstrator with a defined sensor payload | **TBD** | Quadruped base, actuators, sensor payload, compute, battery, safety equipment and integration |
+| AI HOME | Four-wheel indoor assistance demonstrator | **TBD** | Chassis, drive modules, sensor configuration, compute reuse, battery and safety integration |
+| AI NOMAD | Four-wheel outdoor/mobile-assistance demonstrator with manual handling handle | **TBD** | Wheel/drive design, frame/handle, terrain requirements, sensors, compute and battery |
+| AI Global SUV | Removable advisory-only perception/compute research kit on a compatible existing vehicle or bench rig; donor vehicle excluded | **TBD** | Vehicle compatibility, automotive-grade sensors/compute, protected power, read-only interfaces and controlled testing; full vehicle development is out of scope for this kit estimate |
+| AI Step-Through Scooter | Removable advisory-only sensor/compute research kit on a compatible existing scooter or bench rig; donor scooter excluded | **TBD** | Rider-safe mounting, weather/vibration protection, sensors, compute, power and controlled testing; full vehicle development is out of scope for this kit estimate |
+
+The table intentionally reports **TBD** for every verified prototype cost. Any preliminary range shown elsewhere on the website is an unverified planning allowance only and must not be represented as a current supplier-backed cost.
+
 ## 4. Prototype cost worksheet
 
 Create one line per purchasable item or service:
