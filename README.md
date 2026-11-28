@@ -13,7 +13,7 @@ PUI89-Research develops evidence-based, resource-aware and reliable AI research 
 ### 01 — Coconut Harvest AI
 **Agricultural computer vision and coconut maturity assessment.** Studies image-based classification of defined maturity classes, dataset quality, annotation consistency, evaluation and lightweight CPU inference.
 
-### 02 — PUI89 Sentinel — Quadruped Environmental Inspection Robot
+### 02 — PUI89 Sentinel — All-Terrain Inspection Robot Dog
 **Multimodal perception, evidence-aware AI and decision support.** Studies permitted information modalities, uncertainty communication, evidence provenance and human review. Each study must define its application scope and verify data rights before use.
 
 **Scope exclusion:** Narcotics detection and screening, related datasets, X-ray screening and associated forensic spectral research are outside the active scope of this programme.
@@ -72,7 +72,7 @@ Inclusion here means a project belongs to the research portfolio. It does not me
 - [360-Degree Perception Validation & Benchmark Protocol](docs/q1-publication/360_DEGREE_PERCEPTION_VALIDATION_PROTOCOL.md) — measurable coverage, calibration, sensor-fusion baselines, fault injection, six-project metrics, statistical safeguards and edge benchmarks.
 - [Free/Open-Source Implementation Plan](docs/q1-publication/FREE_OPEN_SOURCE_IMPLEMENTATION_PLAN.md) — independent Q1 study plans, selected free tooling, baselines, ablations, metrics and staged implementation gates.
 - [Lightweight Research Utilities](research_tools/README.md) — dependency-free dataset leakage audit and experiment-record tooling.
-- [FreeCut Local Video Production Workflow](docs/FREECUT_LOCAL_VIDEO_PRODUCTION_WORKFLOW.md) — optional browser-based local-first video editing for research explainers and all seven product communication tracks; separate from research evidence, experiment tooling and validation.
+- [FreeCut Local Video Production Workflow](docs/FREECUT_LOCAL_VIDEO_PRODUCTION_WORKFLOW.md) — optional browser-based local-first video editing for research explainers and all six active product communication tracks; separate from research evidence, experiment tooling and validation.
 - [Q1 Publication Engineering Programme](docs/q1-publication/README.md) — shared workflow and evidence gates for all six projects.
 - [Six Project Study Blueprints](docs/q1-publication/PROJECT_STUDY_BLUEPRINTS.md) — candidate research questions, methods, baselines, metrics and validation boundaries.
 - [Manuscript and Statistical Standard](docs/q1-publication/MANUSCRIPT_AND_STATISTICAL_STANDARD.md) — literature review, statistical design, reproducibility, ethics and journal verification.
@@ -93,3 +93,14 @@ PUI89-Research is an independent research programme. Project names describe rese
 ## Product Environmental, Material & Safety Qualification
 
 All six product research tracks reference the [PUI89 Six-Product Environmental, Material & Safety Qualification Framework](https://github.com/Pui89/PUI89-Shared-AI-Core/blob/main/docs/standards/PUI89_SIX_PRODUCT_ENVIRONMENTAL_MATERIAL_SAFETY_QUALIFICATION_V1.0.md). Environmental ratings, material candidates, fire/battery requirements and product-specific test gates are proposed research requirements until exact hardware configurations are specified and independently tested. This reference does not establish physical performance or certification.
+
+
+## Portfolio update — 28 November 2026
+
+The latest repository activity confirms that the six-product register, environmental/material/safety qualification reference, preliminary Coconut Harvest AI literature review, and FreeCut communication workflow have been merged. The 360-degree perception framework and validation protocol are also merged. The Hybrid End-to-End Multimodal AI architecture remains an open pull request and is not treated as an adopted or merged baseline until review is complete.
+
+- Merged research work: [PR #6](https://github.com/Pui89/PUI89-Research/pull/6), [PR #7](https://github.com/Pui89/PUI89-Research/pull/7), [PR #9](https://github.com/Pui89/PUI89-Research/pull/9), [PR #10](https://github.com/Pui89/PUI89-Research/pull/10), [PR #11](https://github.com/Pui89/PUI89-Research/pull/11), [PR #12](https://github.com/Pui89/PUI89-Research/pull/12).
+- Under review: [PR #8 — Hybrid End-to-End Multimodal AI architecture](https://github.com/Pui89/PUI89-Research/pull/8).
+- These are repository/documentation milestones, not evidence of completed experiments, model benchmarks, physical integration, field validation or certification.
+
+**Portfolio boundary:** exactly six active products. Shared AI Core is common infrastructure, not a seventh product. Extreme Flood Rescue AI and the former Sentinel narcotics/X-ray screening scope are excluded from the active portfolio.
